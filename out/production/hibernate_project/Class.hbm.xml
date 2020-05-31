@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--name:表示映射的是哪个类，table表示该类映射数据库的那张表-->
+    <class name="Class" table="class">
+        <!--id，表示表的主键,name表示实体中的属性，type表示其数据类型,column name则是表中的名称-->
+        <id name="cid" type="int">
+            <column name="cid"/>
+            <!--主键生成策略native为数据库自动增长，assigned为自己分配-->
+            <generator class="assigned"/>
+        </id>
+        <property name="classname" type="java.lang.String">
+            <column name="classnsme"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
